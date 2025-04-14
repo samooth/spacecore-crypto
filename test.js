@@ -87,7 +87,7 @@ test('hash', function (t) {
 })
 
 test('namespace', function (t) {
-  const ns = crypto.namespace('hyperswarm/secret-stream', 2)
+  const ns = crypto.namespace('spaceswarm/secret-stream', 2)
 
   t.alike(ns[0], b4a.from('a931a0155b5c09e6d28628236af83c4b8a6af9af60986edeede9dc5d63192bf7', 'hex'))
   t.alike(ns[1], b4a.from('742c9d833d430af4c48a8705e91631eecf295442bbca18996e597097723b1061', 'hex'))
@@ -96,7 +96,7 @@ test('namespace', function (t) {
 })
 
 test('namespace (random access)', function (t) {
-  const ns = crypto.namespace('hyperswarm/secret-stream', [1, 0])
+  const ns = crypto.namespace('spaceswarm/secret-stream', [1, 0])
 
   t.alike(ns[0], b4a.from('742c9d833d430af4c48a8705e91631eecf295442bbca18996e597097723b1061', 'hex'))
   t.alike(ns[1], b4a.from('a931a0155b5c09e6d28628236af83c4b8a6af9af60986edeede9dc5d63192bf7', 'hex'))

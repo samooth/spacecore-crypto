@@ -7,7 +7,7 @@ const LEAF_TYPE = b4a.from([0])
 const PARENT_TYPE = b4a.from([1])
 const ROOT_TYPE = b4a.from([2])
 
-const HYPERCORE = b4a.from('hypercore')
+const SPACECORE = b4a.from('spacecore')
 
 exports.keyPair = function (seed) {
   // key pairs might stay around for a while, so better not to use a default slab to avoid retaining it completely
@@ -142,7 +142,7 @@ exports.randomBytes = function (n) {
 exports.discoveryKey = function (publicKey) {
   // Discovery keys might stay around for a while, so better not to use slab memory (for better gc)
   const digest = b4a.allocUnsafeSlow(32)
-  sodium.crypto_generichash(digest, HYPERCORE, publicKey)
+  sodium.crypto_generichash(digest, SPACECORE, publicKey)
   return digest
 }
 

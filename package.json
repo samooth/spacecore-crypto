@@ -1,7 +1,7 @@
 {
-  "name": "hypercore-crypto",
-  "version": "3.5.0",
-  "description": "The crypto primitives used in hypercore, extracted into a separate module",
+  "name": "spacecore-crypto",
+  "version": "0.0.1",
+  "description": "The crypto primitives used in spacecore, extracted into a separate module",
   "main": "index.js",
   "files": [
     "index.js"
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/hypercore-crypto.git"
+    "url": "https://github.com/samooth/spacecore-crypto.git"
   },
-  "author": "Mathias Buus (@mafintosh)",
+  "author": "Mathias Buus (@samooth)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/hypercore-crypto/issues"
+    "url": "https://github.com/samooth/spacecore-crypto/issues"
   },
-  "homepage": "https://github.com/mafintosh/hypercore-crypto"
+  "homepage": "https://github.com/samooth/spacecore-crypto"
 }
