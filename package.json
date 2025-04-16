@@ -1,7 +1,7 @@
 {
   "name": "spacecore-crypto",
   "version": "0.0.3",
-  "description": "The crypto primitives used in spacecore, extracted into a separate module",
+  "description": "The crypto primitives used in Spacecore, extracted into a separate module",
   "main": "index.js",
   "files": [
     "index.js"

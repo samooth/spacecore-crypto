@@ -87,19 +87,19 @@ test('hash', function (t) {
 })
 
 test('namespace', function (t) {
-  const ns = crypto.namespace('spaceswarm/secret-stream', 2)
+  const ns = crypto.namespace('spaceswarm-secret-stream', 2)
 
-  t.alike(ns[0], b4a.from('a931a0155b5c09e6d28628236af83c4b8a6af9af60986edeede9dc5d63192bf7', 'hex'))
-  t.alike(ns[1], b4a.from('742c9d833d430af4c48a8705e91631eecf295442bbca18996e597097723b1061', 'hex'))
+  t.alike(ns[0], b4a.from('0df8254b6340e1191c6512ff230f394b0f9f96c2ed505d3127e1ec6a3fe0f70e', 'hex'))
+  t.alike(ns[1], b4a.from('6a51c2e03e4da9c3bf794ca72f406786cbf27310eedaa626455bde3cca47beb1', 'hex'))
   t.is(ns[0].buffer.byteLength < 1000, true, 'no default slab')
   t.is(ns[0].buffer, ns[1].buffer, 'slab shared between entries')
 })
 
 test('namespace (random access)', function (t) {
-  const ns = crypto.namespace('spaceswarm/secret-stream', [1, 0])
+  const ns = crypto.namespace('spaceswarm-secret-stream', [1, 0])
 
-  t.alike(ns[0], b4a.from('742c9d833d430af4c48a8705e91631eecf295442bbca18996e597097723b1061', 'hex'))
-  t.alike(ns[1], b4a.from('a931a0155b5c09e6d28628236af83c4b8a6af9af60986edeede9dc5d63192bf7', 'hex'))
+  t.alike(ns[0], b4a.from('6a51c2e03e4da9c3bf794ca72f406786cbf27310eedaa626455bde3cca47beb1', 'hex'))
+  t.alike(ns[1], b4a.from('0df8254b6340e1191c6512ff230f394b0f9f96c2ed505d3127e1ec6a3fe0f70e', 'hex'))
 })
 
 test('another namespace', function (t) {
